@@ -2,9 +2,6 @@ name: 画面見本を公開
 
 on:
   push:
-    branches:
-      - main
-      - master
   workflow_dispatch:
 
 permissions:
@@ -14,7 +11,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
