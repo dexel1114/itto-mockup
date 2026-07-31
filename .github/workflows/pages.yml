@@ -1,0 +1,38 @@
+name: 画面見本を公開
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 画面見本を取得
+        uses: actions/checkout@v4
+      - name: 公開の準備
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: 公開用ファイルをまとめる
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: 画面見本を公開
+        id: deployment
+        uses: actions/deploy-pages@v4
