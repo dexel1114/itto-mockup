@@ -83,7 +83,3 @@
 
 /* 物件カードの需要データを段階別に縦表示 */
 .demand-metrics{display:grid;gap:3px;padding:9px 11px;border-radius:6px;background:#f1f8f7;font-size:12px;color:var(--muted)}.demand-metrics span{display:flex;justify-content:space-between;gap:10px}.demand-metrics b{color:#0f2942}.demand-metrics .bid-metric{margin-top:3px;padding-top:5px;border-top:1px solid #cfe1df;color:#b45e14}.demand-metrics .bid-metric b,.member-counts .bid-count{color:#b45e14}
-
-/* 全画面で直前の画面へ戻れる共通ボタン */
-.back-button{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;padding:8px 12px;border:1px solid #c8d8d5;border-radius:8px;background:#fff;color:#0f2942;font:700 13px "Noto Sans JP",sans-serif;cursor:pointer}.back-button b{font-size:20px;line-height:1}.back-button:hover:not(:disabled){border-color:#149b90;background:#effaf8}.back-button:disabled{opacity:.35;cursor:not-allowed}.back-button:focus-visible{outline:3px solid rgba(20,155,144,.3);outline-offset:2px}
-@media(max-width:760px){.back-button{padding:8px 10px}.back-button span{display:none}}
